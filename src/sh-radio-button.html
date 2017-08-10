@@ -1,0 +1,37 @@
+
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+
+<dom-module id="sh-radio-button">
+
+  <template>
+    <label for=[[dataRadioid]]>{{dataLabel}}</label>
+    <input type="radio" name={{dataName}} id={{dataRadioid}} disabled={{dataDisabled}} >
+  </template>
+
+  <script>
+    class CustomElement1 extends Polymer.Element {
+      static get is()
+      { return "sh-radio-button"; }
+      static get properties() {
+       return {
+       dataRadioid: {
+         type: String,
+         },
+        dataDisabled: {
+          type: Boolean,
+           },
+        dataLabel: {
+             type: String,
+          },
+       dataName: {
+             type: String,
+        },
+
+     }
+   }
+    }
+  window.customElements.define(CustomElement1.is, CustomElement1);
+  </script>
+
+</dom-module>
